@@ -3,4 +3,6 @@ node_modules/
 /gerados/
 *.pdf
 *.docx
+!demo/exemplo-modelos/*.docx
 mapa-modelos.json
+mapa.json
