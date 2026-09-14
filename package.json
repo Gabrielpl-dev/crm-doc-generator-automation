@@ -1,0 +1,10 @@
+{
+  "name": "crm-doc-generator-automation",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Automatiza a geração e o download em lote de PDFs a partir de modelos do Document Generator do Bitrix24, via API REST - substitui um fluxo manual de clique repetitivo.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.6.0"
+  }
+}
