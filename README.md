@@ -18,47 +18,12 @@ O trabalho ia levar horas.
 
 ## Demo
 
-Output real, capturado rodando os três scripts contra um mock local da API
+Print real do terminal rodando os três scripts contra um mock local da API
 (`demo/mock-crm-server.mjs`, incluído no repo) — sem tocar em nenhum CRM de verdade.
 Reproduzível com `node demo/mock-crm-server.mjs` + as variáveis de ambiente de exemplo
 que estão nos comentários do arquivo.
 
-```
-$ node src/listar-modelos.mjs
-101	Y	2026-09-01T10:00:00-03:00	Contrato Padrão
-102	Y	2026-09-01T10:05:00-03:00	Contrato - Cliente Internacional
-103	Y	2026-09-01T10:10:00-03:00	Contrato - Isento de Taxas
-
-Total: 3 modelos, 3 exibidos
-
-$ node src/mapear-modelos.mjs demo/exemplo-modelos mapa.json
-Mapeados: 3 de 3 arquivos -> mapa.json
-
-$ node src/gerar-documentos.mjs mapa.json
-
-=== Modelo 102 (Contrato - Cliente Internacional.docx) ===
--> Chamando crm.documentgenerator.document.add...
--> Documento gerado: id=5001, title="Contrato - Cliente Internacional - Demo"
--> Baixando PDF (crm.documentgenerator.document.getPdf)...
--> Salvo em gerados/102-5001.pdf (192 bytes)
-
-=== Modelo 103 (Contrato - Isento de Taxas.docx) ===
--> Chamando crm.documentgenerator.document.add...
--> Documento gerado: id=5002, title="Contrato - Isento de Taxas - Demo"
--> Baixando PDF (crm.documentgenerator.document.getPdf)...
--> Salvo em gerados/103-5002.pdf (192 bytes)
-
-=== Modelo 101 (Contrato Padrão.docx) ===
--> Chamando crm.documentgenerator.document.add...
--> Documento gerado: id=5003, title="Contrato Padrão - Demo"
--> Baixando PDF (crm.documentgenerator.document.getPdf)...
--> Salvo em gerados/101-5003.pdf (192 bytes)
-
-=== Resumo ===
-102	gerado	Contrato - Cliente Internacional.docx
-103	gerado	Contrato - Isento de Taxas.docx
-101	gerado	Contrato Padrão.docx
-```
+![Terminal rodando os três scripts contra o mock local](demo/demo-screenshot.png)
 
 ## Abordagem
 
